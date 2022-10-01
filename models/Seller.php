@@ -46,7 +46,10 @@ class Seller {
 
         $seller_saved = $database->query($sql);
 
-        return $seller_saved;
+        if ($seller_saved) {
+            return true;
+        }
+        return false;
     }
 
     public function clean($value) {
